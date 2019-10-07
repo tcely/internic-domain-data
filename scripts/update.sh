@@ -175,6 +175,8 @@ if get && verify; then
         git add "../${f#.}"
     done; unset -v f
     cd ../domain && commit || exit 3
+else
+    exit 4
 fi
 
 touch "../domain-${crzs}"
